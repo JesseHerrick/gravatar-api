@@ -34,3 +34,12 @@ task :build do
     puts "Gems in this directory: ".yellow
     Dir.glob("*.gem").each { |gem| puts "=> ".blue + gem}
 end
+
+desc "Install the gem."
+task :install do
+    gem = Dir.glob("*.gem")[0]
+    puts "Installing gem...".yellow
+    puts "From: ".yellow + 
+    `sudo gem install #{gem}`
+    puts "Gem successfully installed!".green
+end

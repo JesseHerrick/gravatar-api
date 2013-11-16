@@ -8,4 +8,5 @@ class Gravatar
 		hash = Gravatar.hash!(email)
 		return "http://www.gravatar.com/avatar/#{hash}"
 	end
+	alias :url :get
 end
