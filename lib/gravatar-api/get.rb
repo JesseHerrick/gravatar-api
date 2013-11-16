@@ -1,12 +1,12 @@
 class Gravatar
-	def self.get(email)
+	def self.url(email, options = { :size => 80 })
 		hash = Gravatar.hash!(email)
-		return "http://www.gravatar.com/avatar/#{hash}"
+		return "http://www.gravatar.com/avatar/#{hash}/#{options[:size]}"
 	end
 
-	def get(email = @@email)
+	def url(email = @@email)
 		hash = Gravatar.hash!(email)
 		return "http://www.gravatar.com/avatar/#{hash}"
 	end
-	alias :url :get
+	alias :get :url
 end
