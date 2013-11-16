@@ -1,5 +1,5 @@
 class Gravatar
-	def self.get(email = @@email)
+	def self.get(email)
 		hash = Gravatar.hash!(email)
 		return "http://www.gravatar.com/avatar/#{hash}"
 	end
