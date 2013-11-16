@@ -27,9 +27,9 @@ desc "Build gem."
 task :build do
     puts "Starting gem build...".yellow
     puts "          Building...".yellow
-    `gem build gravatar.gemspec`
+    `gem build gravatar-api.gemspec`
 
-    version = gravatar-api::VERSION
+    version = VERSION 
     puts "gravatar successfully built! ".green + "Gem ".blue + "v".yellow + version
     puts "Gems in this directory: ".yellow
     Dir.glob("*.gem").each { |gem| puts "=> ".blue + gem}
