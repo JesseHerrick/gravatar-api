@@ -4,7 +4,7 @@ class Gravatar
 		get_url(email)
 	end
 
-	def url(email = @@email)
+	def url(email = @@email, options = { :size => 80 })
 		get_url(email)
 	end
 	alias :get :url
