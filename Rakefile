@@ -37,7 +37,7 @@ end
 
 desc "Install the gem."
 task :install do
-    gem = Dir.glob("*.gem")[0]
+    gem = Dir.glob("*.gem")[-1]
     puts "Installing gem...".yellow
     puts "From: ".yellow + 
     `sudo gem install #{gem}`
