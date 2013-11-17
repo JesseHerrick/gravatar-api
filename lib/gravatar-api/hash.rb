@@ -7,4 +7,11 @@ class Gravatar
 		hash = Digest::MD5.hexdigest(email)
 		return hash
 	end
+
+	# MD5 hash the given email.
+	def hash!
+		@@email.downcase!
+		hash = Digest::MD5.hexdigest(email)
+		return hash
+	end
 end
