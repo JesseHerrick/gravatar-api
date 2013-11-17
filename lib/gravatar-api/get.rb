@@ -3,19 +3,19 @@ class Gravatar
 	# A class method to get your Gravatar URL.
 		# A hash of options for size as well.
 	def self.url(email, options = { :size => 80 })
-		get_url(email)
+		get_url(email, options)
 	end
 
 	# Same as above but as an instance method.
-	def url(email = @@email, options = { :size => 80 })
-		get_url(email)
+	def url(options = { :size => 80 })
+		get_url(@@email, options)
 	end
 	# Make a new method 'get' the same as the instance method 'url'.
 	alias :get :url
 
 	private
 	# A private class to save lines of code.
-	def get_url(email)
+	def get_url(email, options)
 		hash = Gravatar.hash!(email)
 		if options[:size] == 80
 			return "http://www.gravatar.com/avatar/#{hash}"
