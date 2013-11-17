@@ -20,7 +20,7 @@ class Gravatar
 		if options[:size] == 80
 			return "http://www.gravatar.com/avatar/#{hash}"
 		else
-			return "http://www.gravatar.com/avatar/#{hash}/#{options[:size]}"
+			return "http://www.gravatar.com/avatar/#{hash}?s=#{options[:size]}"
 		end
 	end
 end
