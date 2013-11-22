@@ -1,5 +1,5 @@
 require 'gravatar-api/version'
-require 'gravatar-api/get'
+require 'gravatar-api/url'
 require 'gravatar-api/hash'
 
 class Gravatar
