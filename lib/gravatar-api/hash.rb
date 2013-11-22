@@ -14,4 +14,5 @@ class Gravatar
 		hash = Digest::MD5.hexdigest(@@email)
 		return hash
 	end
+	alias :hash :hash!
 end
