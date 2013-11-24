@@ -3,6 +3,9 @@ gravatar-api
 
 A library for easy, object oriented Gravatar API access.
 
+[![Gem Version](https://badge.fury.io/rb/gravatar-api.png)](http://badge.fury.io/rb/gravatar-api)
+[![Dependency Status](https://gemnasium.com/JesseHerrick/shortener.png)](https://gemnasium.com/JesseHerrick/shortener)
+
 # Using the Gem
 gravatar-api was designed to use the Gravatar API properly for easy use in web applications (and whatever else you want!). 
 
