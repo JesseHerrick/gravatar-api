@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), *%w[lib]))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), *%w[test]))
 
 # Created by Jesse Herrick
 # www.jessegrant.net
@@ -16,7 +17,7 @@ require "colorize"
 
 # Helpers
 def test(filename)
-    `ruby -I . test/test_#{filename}`
+    puts `ruby -I . test/test_#{filename}.rb`
 end
 
 # Tasks
@@ -27,7 +28,7 @@ end
 
 desc "Default task."
 task :default do
-    `rake test`
+    puts `rake test`
     puts `rake version`
     puts "Gem seems to be in tip top shape!".green
     puts "Run: ".yellow + "`gravatar --help` to list all commands."
