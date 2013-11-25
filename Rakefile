@@ -35,7 +35,8 @@ end
 
 desc "Run all tests."
 task :test do
-
+    test("hash")
+    test("url")
 end
 
 desc "Build gem."
