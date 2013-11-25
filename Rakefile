@@ -2,6 +2,10 @@
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), *%w[lib]))
 
+# Created by Jesse Herrick
+# www.jessegrant.net
+# jessegrantherrick@gmail.com
+
 # Lib Files
 require 'gravatar-api/version'
 
@@ -9,6 +13,11 @@ require 'gravatar-api/version'
 require "rubygems"
 require "rake"
 require "colorize"
+
+# Helpers
+def test(filename)
+    `ruby -I . test/test_#{filename}`
+end
 
 # Tasks
 desc "Gem version"
@@ -18,9 +27,15 @@ end
 
 desc "Default task."
 task :default do
+    `rake test`
     puts `rake version`
     puts "Gem seems to be in tip top shape!".green
     puts "Run: ".yellow + "`gravatar --help` to list all commands."
+end
+
+desc "Run all tests."
+task :test do
+
 end
 
 desc "Build gem."
