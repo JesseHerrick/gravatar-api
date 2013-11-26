@@ -7,7 +7,9 @@ A library for easy, object oriented Gravatar API access.
 [![Dependency Status](https://gemnasium.com/JesseHerrick/gravatar-api.png)](https://gemnasium.com/JesseHerrick/gravatar-api)
 
 # Using the Gem
-gravatar-api was designed to use the Gravatar API properly for easy use in web applications (and whatever else you want!). 
+gravatar-api was designed to use the Gravatar API properly for easy use in [web applications](http://gravatar.jessegrant.net/) (and whatever else you want!). 
+
+If you want to see an example of web app source code using gravatar-api check out [this.](https://github.com/JesseHerrick/gravatar-api-example)
 
 Examples: 
 ```ruby
@@ -27,7 +29,7 @@ profile.hash!
  # => "9f3712c7a02579d7e50cb20d2680eb67"
 ```
 
-The hash!(email) method also works as a class method.
+The `hash!(email)` method also works as a class method.
 ```ruby
 require 'gravatar-api'
 
